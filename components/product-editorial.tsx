@@ -40,7 +40,7 @@ export function ProductEditorial({ product, variant = 'left-lg', index, parallax
       <div className={`lg:row-start-1 lg:pb-6 ${LAYOUT[variant].text}`}>
         {index !== undefined && <p className="label mb-6 text-bone/50">№ {String(index).padStart(2, '0')}</p>}
         <p className="label text-bone/70">{product.category}</p>
-        <h3 className="display mt-4 text-[clamp(2.25rem,6vw,4.5rem)] lg:text-[clamp(2.75rem,3.6vw,4.25rem)]">
+        <h3 className="display mt-4 text-[clamp(2rem,6vw,4.5rem)] lg:text-[clamp(2.75rem,3.6vw,4.25rem)]">
           <Line>{product.name}</Line>
         </h3>
         <Fade delay={0.1}>

@@ -41,7 +41,7 @@ export function Nutrition() {
         {/* Затемнение снизу: заголовок не теряется на ярких банках */}
         <m.div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/90 via-ink/55 to-transparent px-5 pb-12 pt-40 md:px-10 md:pb-16 md:pt-56" style={{ opacity: titleOpacity, y: titleY }}>
           <SceneLabel n="03" title="Спортивное питание" />
-          <h2 className="display mt-6 text-[clamp(2.75rem,11vw,12rem)]">
+          <h2 className="display mt-6 text-[clamp(2.5rem,11vw,12rem)]">
             <Line>Полка</Line>
             <Line delay={0.1} className="text-bone/60">без случайностей</Line>
           </h2>

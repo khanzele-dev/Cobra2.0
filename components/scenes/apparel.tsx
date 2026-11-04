@@ -48,7 +48,7 @@ export function Apparel() {
 
         <div className="relative z-10 order-2 flex flex-col justify-end px-5 pb-8 md:order-1 md:col-span-5 md:justify-center md:px-10 md:pb-0">
           <SceneLabel n="05" title="Одежда" />
-          <h2 className="display mt-5 text-[clamp(2.25rem,5.5vw,5.5rem)] md:mt-8">
+          <h2 className="display mt-5 text-[clamp(2.25rem,9vw,3.5rem)] md:mt-8 md:text-[clamp(1.875rem,calc(5.4vw-0.75rem),5.5rem)]">
             Тренировочный<br />комплект
           </h2>
           <p className="mt-4 hidden max-w-sm text-[15px] leading-relaxed text-bone/55 md:block">{KIT.description}</p>

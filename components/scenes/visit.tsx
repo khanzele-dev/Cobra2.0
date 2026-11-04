@@ -23,7 +23,7 @@ export function Visit() {
       <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:items-end">
         <div className="md:col-span-6">
           <SceneLabel n="09" title="Визит" tone="light" />
-          <h2 id="visit-title" className="display mt-8 text-[clamp(3rem,9vw,8.5rem)]">
+          <h2 id="visit-title" className="display mt-8 text-[clamp(3rem,8vw,8.5rem)]">
             <Line>Приходите</Line>
             <Line delay={0.1} className="text-ink/35">в магазин</Line>
           </h2>

@@ -103,7 +103,7 @@ function BeltList({ active, onSelect }: { active: number; onSelect: (i: number) 
                 </span>
                 <span className="order-3 lg:order-none">
                   <span
-                    className={`display block text-2xl transition-[color,transform] duration-700 ease-[var(--ease-cine)] lg:text-[clamp(1.75rem,2.6vw,2.75rem)] ${
+                    className={`display block text-[clamp(1.125rem,5.6vw,1.5rem)] transition-[color,transform] duration-700 ease-[var(--ease-cine)] lg:text-[clamp(1.75rem,2.6vw,2.75rem)] ${
                       on ? 'text-bone lg:translate-x-2' : 'text-bone/40 group-hover:text-bone/70'
                     }`}
                   >

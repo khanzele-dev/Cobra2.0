@@ -48,7 +48,7 @@ export function Collection() {
         <m.div className="pointer-events-none absolute inset-0 flex flex-col justify-between bg-gradient-to-t from-ink via-ink/20 to-ink/70 px-5 pb-10 pt-24 md:px-10 md:pb-14" style={{ opacity: headOpacity }}>
           <SceneLabel n="07" title="Коллекция" />
           <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
-            <h2 className="display text-[clamp(3.5rem,13vw,13rem)]">Коллекция</h2>
+            <h2 className="display text-[clamp(3rem,13vw,13rem)]">Коллекция</h2>
             <Link href="/catalog" className="label link-u pointer-events-auto self-start text-bone md:self-auto md:pb-6">
               Открыть каталог →
             </Link>

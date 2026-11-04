@@ -68,7 +68,7 @@ export function ProductView({ product }: { product: Product }) {
         </nav>
 
         <p className="label mt-12 text-bone/70">{product.category}</p>
-        <h1 className="display mt-4 text-[clamp(2.5rem,9vw,4rem)] md:text-[clamp(2.5rem,4.2vw,4.25rem)]">
+        <h1 className="display mt-4 text-[clamp(2.125rem,10vw,4rem)] md:text-[clamp(2.25rem,4.2vw,4.25rem)] xl:text-[clamp(2.5rem,3.7vw,4.25rem)]">
           <Line>{product.name}</Line>
         </h1>
         <p className="mt-6 font-mono text-lg">{formatPrice(product.price)}</p>
