@@ -76,7 +76,7 @@ function BeltList({ active, onSelect }: { active: number; onSelect: (i: number) 
       <ul
         role="group"
         aria-labelledby="belts-label"
-        className="relative -mx-5 mt-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 pb-2 [scrollbar-width:none] md:-mx-10 md:px-10 lg:mx-0 lg:mt-6 lg:flex-col lg:gap-0 lg:overflow-visible lg:border-t lg:border-bone/10 lg:p-0"
+        className="relative -mx-5 mt-4 flex snap-x snap-mandatory scroll-px-5 gap-3 overflow-x-auto px-5 pb-2 md:scroll-px-10 [scrollbar-width:none] md:-mx-10 md:px-10 lg:mx-0 lg:mt-6 lg:flex-col lg:gap-0 lg:overflow-visible lg:border-t lg:border-bone/10 lg:p-0"
       >
         {/* Световая полоса едет к активному поясу */}
         <span
