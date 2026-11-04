@@ -122,7 +122,7 @@ export function Header() {
                         <span className="label w-10 text-bone/40">13.{String(i + 1).padStart(2, '0')}</span>
                         <span
                           // размер зависит и от высоты экрана: пять пунктов + нижняя строка помещаются на низком ноутбуке
-                          style={{ fontSize: 'clamp(2.25rem, min(6.5vw, 9.5svh), 6rem)' }}
+                          style={{ fontSize: 'clamp(2.5rem, min(7.5vw, 10.5svh), 7rem)' }}
                           className={`display transition-all duration-700 ease-[var(--ease-cine)] group-hover:translate-x-3 ${
                             hover === i ? 'text-bone' : 'text-bone/35 lg:text-bone/25'
                           }`}
@@ -136,7 +136,7 @@ export function Header() {
               </ul>
 
               <div className="relative hidden lg:col-span-5 lg:block">
-                <div className="absolute right-0 top-1/2 aspect-[4/5] max-w-full -translate-y-1/2 overflow-hidden bg-char" style={{ height: 'min(62svh, 100%)' }}>
+                <div className="absolute right-0 top-1/2 aspect-[4/5] max-w-full -translate-y-1/2 overflow-hidden bg-char" style={{ height: 'min(72svh, 100%)' }}>
                   <AnimatePresence mode="popLayout">
                     <m.div
                       key={hover}
