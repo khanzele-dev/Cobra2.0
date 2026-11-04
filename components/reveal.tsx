@@ -8,7 +8,8 @@ export function Line({ children, delay = 0, className = '' }: { children: React.
   return (
     // Видимость ловим на маске: сама строка до старта спрятана под ней, и наблюдатель её «не видит».
     // Маска режет только по вертикали — длинное слово не обрезается сбоку.
-    <m.span className={`block overflow-x-visible overflow-y-clip pb-[0.06em] ${className}`} initial="hidden" whileInView="shown" viewport={{ once: true, margin: '-10% 0px' }}>
+    // Запас под хвосты букв (у, р, д) снизу и кратку «й» сверху; отрицательные отступы возвращают прежнюю высоту строки.
+    <m.span className={`block overflow-x-visible overflow-y-clip -mb-[0.18em] -mt-[0.24em] pb-[0.24em] pt-[0.24em] ${className}`} initial="hidden" whileInView="shown" viewport={{ once: true, margin: '-10% 0px' }}>
       <m.span
         className="block"
         variants={{ hidden: { y: '108%' }, shown: { y: '0%' } }}
