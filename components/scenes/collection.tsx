@@ -1,8 +1,8 @@
 'use client'
 
 import Link from 'next/link'
-import { useRef } from 'react'
-import { m, useScroll, useTransform } from 'framer-motion'
+import { useEffect, useRef } from 'react'
+import { m, useMotionValue, useMotionValueEvent, useScroll, useTransform } from 'framer-motion'
 import { Cropped } from '@/components/media'
 import { SceneLabel } from '@/components/reveal'
 import { useCalm, useIsMobile } from '@/components/hooks'
@@ -18,7 +18,16 @@ export function Collection() {
   const ref = useRef<HTMLElement>(null)
   const calm = useCalm()
   const mobile = useIsMobile()
-  const { scrollYProgress: p } = useScroll({ target: ref, offset: ['start start', 'end end'] })
+  const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end end'] })
+  // Прогресс только растёт: раз коллекция раскрылась, надпись и товары остаются — и ниже секции, и при прокрутке назад
+  const p = useMotionValue(0)
+  const reach = (v: number) => {
+    if (v > p.get()) p.set(v)
+  }
+  useMotionValueEvent(scrollYProgress, 'change', reach)
+  useEffect(() => {
+    reach(scrollYProgress.get())
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
   const scale = useTransform(p, [0, 0.65], calm ? [1, 1] : [mobile ? 3.1 : 2.9, 1])
   const others = useTransform(p, [0.1, 0.5], calm ? [0.55, 0.55] : [0, 0.55])
   const headOpacity = useTransform(p, [0.55, 0.8], calm ? [1, 1] : [0, 1])

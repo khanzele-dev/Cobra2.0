@@ -73,6 +73,8 @@ html.lenis body {
   text-transform: uppercase;
   line-height: 0.88;
   letter-spacing: -0.005em;
+  /* страховка: слово шире колонки переносится, а не уезжает за край */
+  overflow-wrap: break-word;
 }
 
 .wordmark {

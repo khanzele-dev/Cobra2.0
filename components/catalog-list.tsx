@@ -56,8 +56,8 @@ export function CatalogList({ initial }: { initial: Filter }) {
           return (
             <section key={group.key} aria-labelledby={`g-${group.key}`}>
               <header className="mb-16 flex items-end justify-between gap-6 border-b border-bone/15 pb-5 md:mb-24">
-                <h2 id={`g-${group.key}`} className="display text-[clamp(2rem,4.5vw,4rem)]">{group.label}</h2>
-                <span className="label pb-2 text-bone/40">{String(items.length).padStart(2, '0')}</span>
+                <h2 id={`g-${group.key}`} className="display min-w-0 text-[clamp(1.75rem,4.5vw,4rem)]">{group.label}</h2>
+                <span className="label shrink-0 pb-2 text-bone/50">{String(items.length).padStart(2, '0')}</span>
               </header>
               <div className="flex flex-col gap-20 md:gap-28">
                 {items.map((p, i) => (
