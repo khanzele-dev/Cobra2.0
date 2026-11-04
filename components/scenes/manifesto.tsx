@@ -16,14 +16,14 @@ export function Manifesto() {
   const x2 = useTransform(p, [0, 1], still ? ['0%', '0%'] : [`${a}%`, `-${a / 2}%`])
 
   return (
-    <section ref={ref} aria-label="Философия" className="relative overflow-hidden bg-ink pb-20 pt-32 md:pb-32 md:pt-48">
+    <section ref={ref} aria-label="Философия" className="relative overflow-hidden bg-ink pb-20 pt-20 md:pb-24 md:pt-32">
       <div className="display select-none text-[clamp(4rem,17vw,17rem)] leading-[0.84]" aria-label="Сила. Дисциплина. Результат.">
         <m.p style={{ x: x1 }} className="whitespace-nowrap pl-[6vw]" aria-hidden="true">Сила</m.p>
         <m.p style={{ x: x2 }} className="outline-text whitespace-nowrap text-right" aria-hidden="true">Дисциплина</m.p>
         <m.p style={{ x: x1 }} className="whitespace-nowrap pl-[18vw]" aria-hidden="true">Результат</m.p>
       </div>
 
-      <div className="mt-28 grid grid-cols-1 gap-16 px-5 md:mt-40 md:grid-cols-12 md:px-10">
+      <div className="mt-16 grid grid-cols-1 gap-10 px-5 md:mt-24 md:grid-cols-12 md:px-10">
         <Fade className="md:col-span-6 md:col-start-2">
           <p className="label text-bone/45">Позиция</p>
           <blockquote className="mt-6 font-display text-[clamp(1.75rem,3.4vw,3.25rem)] font-light leading-[1.08]">

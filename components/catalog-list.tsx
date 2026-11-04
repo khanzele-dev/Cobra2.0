@@ -27,7 +27,7 @@ export function CatalogList({ initial }: { initial: Filter }) {
 
   return (
     <>
-      <nav aria-label="Категории" className="sticky top-16 z-30 -mx-5 mt-16 border-y border-bone/10 bg-ink/95 px-5 md:top-20 md:-mx-10 md:px-10">
+      <nav aria-label="Категории" className="sticky top-16 z-30 -mx-5 mt-10 border-y border-bone/10 bg-ink/95 px-5 md:top-20 md:-mx-10 md:px-10">
         <ul className="flex gap-7 overflow-x-auto py-4 [scrollbar-width:none]">
           {chips.map((c) => {
             const active = filter === c.key || (filter === 'nutrition' && NUTRITION.includes(c.key as Group))
@@ -49,7 +49,7 @@ export function CatalogList({ initial }: { initial: Filter }) {
         </ul>
       </nav>
 
-      <div className="flex flex-col gap-40 py-24 md:gap-56 md:py-40">
+      <div className="flex flex-col gap-24 py-24 md:gap-36 md:py-28">
         {visible.map((group) => {
           const items = products.filter((p) => p.group === group.key)
           if (!items.length) return null
@@ -59,7 +59,7 @@ export function CatalogList({ initial }: { initial: Filter }) {
                 <h2 id={`g-${group.key}`} className="display text-[clamp(2rem,4.5vw,4rem)]">{group.label}</h2>
                 <span className="label pb-2 text-bone/40">{String(items.length).padStart(2, '0')}</span>
               </header>
-              <div className="flex flex-col gap-28 md:gap-40">
+              <div className="flex flex-col gap-20 md:gap-28">
                 {items.map((p, i) => (
                   <ProductEditorial parallax={false} key={p.slug} product={p} variant={VARIANTS[i % VARIANTS.length]} index={i + 1} />
                 ))}

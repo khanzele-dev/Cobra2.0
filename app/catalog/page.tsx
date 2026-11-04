@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default async function CatalogPage({ searchParams }: { searchParams: Promise<{ g?: string }> }) {
   const { g } = await searchParams
   return (
-    <div className="px-5 pt-36 md:px-10 md:pt-48">
+    <div className="px-5 pt-28 md:px-10 md:pt-32">
       <p className="label text-bone/45">{products.length} позиций · Каспийск</p>
       <h1 className="display mt-6 text-[clamp(4.5rem,18vw,18rem)] leading-[0.8]">
         <Line>Каталог</Line>

@@ -14,14 +14,14 @@ export const metadata: Metadata = {
 export default function BrandPage() {
   return (
     <>
-      <section className="px-5 pb-24 pt-40 md:px-10 md:pb-40 md:pt-56">
+      <section className="px-5 pb-24 pt-28 md:px-10 md:pb-28 md:pt-40">
         <p className="label text-bone/45">О бренде</p>
         <h1 className="display mt-8 max-w-[14ch] text-[clamp(3.25rem,9vw,9rem)]">
           <Line>13 COBRA —</Line>
           <Line delay={0.08}>это про характер,</Line>
           <Line delay={0.16} className="text-bone/40">а не про моду.</Line>
         </h1>
-        <div className="mt-20 grid grid-cols-1 gap-8 md:grid-cols-12">
+        <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-12">
           <Fade className="space-y-5 text-[15px] leading-relaxed text-bone/60 md:col-span-4 md:col-start-7">
             <p>
               Мы начали с простой идеи: спортивное питание и экипировка не должны быть компромиссом. Слишком много
@@ -37,8 +37,8 @@ export default function BrandPage() {
 
       <WordSequence words={['Сила', 'Дисциплина', 'Характер', 'Результат']} />
 
-      <section id="history" className="scroll-mt-20 px-5 py-32 md:px-10 md:py-48">
-        <div className="grid grid-cols-1 gap-16 md:grid-cols-12">
+      <section id="history" className="scroll-mt-20 px-5 py-20 md:px-10 md:py-32">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-12">
           <div className="md:col-span-5">
             <p className="label text-bone/45">История</p>
             <h2 className="display mt-8 text-[clamp(3rem,7vw,7rem)]">
@@ -65,8 +65,8 @@ export default function BrandPage() {
         </div>
       </section>
 
-      <section id="coach" aria-label="Тренер" className="concrete relative px-5 py-32 md:px-10 md:py-48">
-        <div className="grid grid-cols-1 gap-16 md:grid-cols-12 md:items-center">
+      <section id="coach" aria-label="Тренер" className="concrete relative px-5 py-20 md:px-10 md:py-32">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:items-center">
           <Fade className="md:col-span-4">
             <div className="relative aspect-[3/4] overflow-hidden bg-char">
               <Media src="/media/coach-efgan.jpg" alt={`${COACH.name}, тренер зала «Кобра»`} sizes="(max-width: 768px) 100vw, 33vw" className="object-cover grayscale contrast-125" />
@@ -91,14 +91,14 @@ export default function BrandPage() {
         </div>
       </section>
 
-      <section aria-label="Позиция" className="px-5 pt-32 md:px-10 md:pt-48">
+      <section aria-label="Позиция" className="px-5 pt-20 md:px-10 md:pt-32">
         <p className="label text-bone/45">Позиция</p>
         <Fade className="mt-8 max-w-5xl font-display text-[clamp(2rem,4.6vw,4.5rem)] font-light leading-[1.05]">
           <p>{PHILOSOPHY}</p>
         </Fade>
       </section>
 
-      <section aria-label="Ценности" className="px-5 py-32 md:px-10 md:py-48">
+      <section aria-label="Ценности" className="px-5 py-20 md:px-10 md:py-32">
         <p className="label text-bone/45">Ценности</p>
         <ol className="mt-12 border-t border-bone/15">
           {VALUES.map((v, i) => (
@@ -111,7 +111,7 @@ export default function BrandPage() {
           ))}
         </ol>
 
-        <div className="mt-32 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 md:grid-cols-4">
+        <div className="mt-20 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 md:grid-cols-4">
           {PRINCIPLES.map((p, i) => (
             <Fade key={p.title} delay={i * 0.08} className="border-t border-bone/15 pt-5">
               <p className="label text-bone/35">{String(i + 1).padStart(2, '0')}</p>
@@ -121,7 +121,7 @@ export default function BrandPage() {
           ))}
         </div>
 
-        <Link href="/catalog" className="label link-u mt-24 inline-block">Перейти в каталог →</Link>
+        <Link href="/catalog" className="label link-u mt-16 inline-block">Перейти в каталог →</Link>
       </section>
     </>
   )

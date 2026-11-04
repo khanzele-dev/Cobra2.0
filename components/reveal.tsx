@@ -6,17 +6,17 @@ import { EASE } from '@/lib/motion'
 /** Строка выезжает из-под маски, когда попадает в кадр */
 export function Line({ children, delay = 0, className = '' }: { children: React.ReactNode; delay?: number; className?: string }) {
   return (
-    <span className={`block overflow-hidden pb-[0.06em] ${className}`}>
+    // Видимость ловим на маске: сама строка до старта спрятана под ней, и наблюдатель её «не видит».
+    // Маска режет только по вертикали — длинное слово не обрезается сбоку.
+    <m.span className={`block overflow-x-visible overflow-y-clip pb-[0.06em] ${className}`} initial="hidden" whileInView="shown" viewport={{ once: true, margin: '-10% 0px' }}>
       <m.span
         className="block"
-        initial={{ y: '108%' }}
-        whileInView={{ y: '0%' }}
-        viewport={{ once: true, margin: '-10% 0px' }}
+        variants={{ hidden: { y: '108%' }, shown: { y: '0%' } }}
         transition={{ duration: 1.3, delay, ease: EASE }}
       >
         {children}
       </m.span>
-    </span>
+    </m.span>
   )
 }
 

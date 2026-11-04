@@ -8,7 +8,7 @@ import { SITE } from '@/lib/site'
 export function FinalScreen() {
   const ext = { target: '_blank', rel: 'noopener noreferrer' }
   return (
-    <footer id="contacts" className="relative overflow-hidden bg-ink px-5 pb-8 pt-20 md:px-10 md:pt-28">
+    <footer id="contacts" className="relative overflow-hidden bg-ink px-5 pb-8 pt-14 md:px-10 md:pt-20">
       <Perforation id="footer-perf" size={72} clearCenter className="absolute inset-0 text-bone/[0.035]" />
       <div className="led absolute left-[15%] right-[15%] top-0 opacity-40" aria-hidden="true" />
 
@@ -17,7 +17,7 @@ export function FinalScreen() {
         <Line delay={0.12}>это привычка.</Line>
       </h2>
 
-      <div className="relative mt-16 grid grid-cols-1 gap-10 border-t border-bone/10 pt-10 sm:grid-cols-2 lg:grid-cols-4 md:mt-20">
+      <div className="relative mt-10 grid grid-cols-1 gap-10 border-t border-bone/10 pt-10 sm:grid-cols-2 lg:grid-cols-4 md:mt-14">
         <div>
           <Link href="/" aria-label="13 COBRA — на главную"><Logo className="w-[140px]" /></Link>
           <p className="label mt-4 text-bone/45">Магазин · бренд · зал «Кобра»</p>

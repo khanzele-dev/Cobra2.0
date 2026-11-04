@@ -8,7 +8,7 @@ const ITEMS = products.filter((p) => p.group === 'accessories')
 // Сцена 05. Мелкие предметы на бетонной плите под одной линией света.
 export function Accessories() {
   return (
-    <section id="accessories" aria-label="Аксессуары" className="cv-auto relative bg-ink px-5 py-32 md:px-10 md:py-48">
+    <section id="accessories" aria-label="Аксессуары" className="cv-auto relative bg-ink px-5 py-20 md:px-10 md:py-32">
       <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
         <div>
           <SceneLabel n="06" title="Аксессуары" />
@@ -19,7 +19,7 @@ export function Accessories() {
         </div>
       </div>
 
-      <div className="mt-20 grid grid-cols-1 items-end gap-x-6 gap-y-20 md:grid-cols-12">
+      <div className="mt-14 grid grid-cols-1 items-end gap-x-6 gap-y-14 md:grid-cols-12">
         {ITEMS.map((p, i) => (
           <Fade key={p.slug} delay={i * 0.15} className={i === 0 ? 'md:col-span-5 md:col-start-2' : 'md:col-span-4 md:col-start-8 md:mb-24'}>
             <Link href={`/catalog/${p.slug}`} className="group block">

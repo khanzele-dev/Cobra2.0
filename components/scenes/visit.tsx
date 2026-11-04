@@ -18,8 +18,8 @@ export function Visit() {
   }
 
   return (
-    <section id="visit" aria-labelledby="visit-title" className="cv-auto bg-wall px-5 py-32 text-ink md:px-10 md:py-44">
-      <div className="grid grid-cols-1 gap-16 md:grid-cols-12 md:items-end">
+    <section id="visit" aria-labelledby="visit-title" className="cv-auto bg-wall px-5 py-20 text-ink md:px-10 md:py-28">
+      <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:items-end">
         <div className="md:col-span-6">
           <SceneLabel n="09" title="Визит" tone="light" />
           <h2 id="visit-title" className="display mt-8 text-[clamp(3rem,9vw,8.5rem)]">

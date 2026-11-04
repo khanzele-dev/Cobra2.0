@@ -39,7 +39,7 @@ export function Nutrition() {
         </m.div>
       </div>
 
-      <div className="relative -mt-[40svh] flex flex-col gap-32 px-5 pb-40 md:gap-48 md:px-10">
+      <div className="relative -mt-[40svh] flex flex-col gap-20 px-5 pb-24 md:gap-32 md:px-10">
         {NUTRITION.map((product, i) => (
           <ProductEditorial key={product.slug} product={product} variant={VARIANTS[i % VARIANTS.length]} index={i + 1} />
         ))}

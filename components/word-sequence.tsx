@@ -15,7 +15,7 @@ export function WordSequence({ words }: { words: string[] }) {
 
   if (calm) {
     return (
-      <section aria-label="Ценности" className="display px-5 py-32 text-[clamp(3.5rem,14vw,14rem)] md:px-10">
+      <section aria-label="Ценности" className="display px-5 py-20 text-[clamp(3.5rem,14vw,14rem)] md:px-10">
         {words.map((w) => <p key={w}>{w}</p>)}
       </section>
     )

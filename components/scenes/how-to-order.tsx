@@ -8,7 +8,7 @@ const STEPS = [
 
 export function HowToOrder() {
   return (
-    <section aria-labelledby="order-title" className="cv-auto bg-ink px-5 py-32 md:px-10 md:py-44">
+    <section aria-labelledby="order-title" className="cv-auto bg-ink px-5 py-20 md:px-10 md:py-28">
       <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
         <h2 id="order-title" className="display text-[clamp(3rem,9vw,8.5rem)]">
           <Line>Как заказать</Line>
@@ -16,7 +16,7 @@ export function HowToOrder() {
         <p className="label text-bone/45 md:pb-4">Три шага · без регистрации</p>
       </div>
 
-      <ol className="mt-16 grid grid-cols-1 border-t border-bone/15 md:mt-24 md:grid-cols-3">
+      <ol className="mt-10 grid grid-cols-1 border-t border-bone/15 md:mt-16 md:grid-cols-3">
         {STEPS.map((s, i) => (
           <li key={s.title} className="border-b border-bone/10 py-10 md:border-b-0 md:border-r md:px-8 md:py-12 md:first:pl-0 md:last:border-r-0">
             <Fade delay={i * 0.08}>

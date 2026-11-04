@@ -27,7 +27,7 @@ export function Apparel() {
 
   if (calm) {
     return (
-      <section id="apparel" aria-label="Одежда" className="bg-ink px-5 py-32 md:px-10">
+      <section id="apparel" aria-label="Одежда" className="bg-ink px-5 py-20 md:px-10">
         <SceneLabel n="05" title="Одежда" />
         <h2 className="display mt-8 text-[clamp(3rem,9vw,8rem)]">{KIT.name}</h2>
         <div className="mt-12 grid grid-cols-2 gap-4">

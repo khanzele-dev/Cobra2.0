@@ -32,7 +32,7 @@ const SHOTS = [
 
 export function Materials() {
   return (
-    <section id="store" aria-labelledby="store-title" className="bg-wall px-5 pb-20 pt-14 text-ink md:px-10 md:pb-32 md:pt-20 lg:pb-40 lg:pt-28">
+    <section id="store" aria-labelledby="store-title" className="bg-wall px-5 pb-20 pt-14 text-ink md:px-10 md:pb-24 md:pt-20 lg:pb-28 lg:pt-24">
       <SceneLabel n="02" title="Магазин" tone="light" />
 
       <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-12 md:items-end md:gap-10">
@@ -49,7 +49,7 @@ export function Materials() {
         </Fade>
       </div>
 
-      <div className="mt-12 grid grid-cols-2 gap-x-3 gap-y-3 md:mt-20 md:grid-cols-12 md:gap-x-6 md:gap-y-16 lg:mt-28">
+      <div className="mt-12 grid grid-cols-2 gap-x-3 gap-y-3 md:mt-14 md:grid-cols-12 md:gap-x-6 md:gap-y-16 lg:mt-20">
         {SHOTS.map((s, i) => (
           <Fade key={s.src} delay={i % 2 ? 0.08 : 0} className={s.cls}>
             <div className={`relative overflow-hidden bg-steel ${s.ratio}`}>

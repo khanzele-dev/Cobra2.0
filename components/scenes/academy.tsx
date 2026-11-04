@@ -9,14 +9,14 @@ export function Academy() {
   const { academy } = SITE
 
   return (
-    <section id="academy" aria-labelledby="academy-title" className="cv-auto relative bg-ink px-5 py-32 md:px-10 md:py-48">
+    <section id="academy" aria-labelledby="academy-title" className="cv-auto relative bg-ink px-5 py-20 md:px-10 md:py-32">
       <SceneLabel n="08" title="Зал «Кобра»" />
       <h2 id="academy-title" className="display mt-8 text-[clamp(3.5rem,12vw,12rem)]">
         <Line>Сначала</Line>
         <Line delay={0.1} className="text-bone/40">был зал</Line>
       </h2>
 
-      <div className="mt-16 grid grid-cols-1 gap-16 md:mt-24 md:grid-cols-12">
+      <div className="mt-10 grid grid-cols-1 gap-10 md:mt-16 md:grid-cols-12">
         <Fade className="md:col-span-5">
           <div className="relative aspect-[4/5] overflow-hidden bg-char">
             <Media src="/media/coach-efgan.jpg" alt={`${COACH.name}, тренер зала «Кобра», на турнире`} sizes="(max-width: 768px) 100vw, 42vw" className="object-cover grayscale" />
