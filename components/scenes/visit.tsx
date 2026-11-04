@@ -19,7 +19,7 @@ export function Visit() {
   }
 
   return (
-    <section id="visit" aria-labelledby="visit-title" className="cv-auto bg-wall px-5 pb-24 pt-20 text-ink md:px-10 md:pb-36 md:pt-28">
+    <section id="visit" aria-labelledby="visit-title" className="cv-auto bg-wall px-5 pb-24 pt-20 text-ink md:px-10 md:pb-24 md:pt-28">
       <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:items-end">
         <div className="md:col-span-6">
           <SceneLabel n="09" title="Визит" tone="light" />
@@ -50,8 +50,8 @@ export function Visit() {
       </div>
 
       {/* Финал страницы: знаки бренда на светлой стене, как на вывеске магазина */}
-      <Fade className="mt-24 flex justify-center border-t border-ink/15 pt-20 md:mt-32 md:pt-32">
-        <Marks width="min(78vw, 46rem)" />
+      <Fade className="mt-24 flex justify-center border-t border-ink/15 pt-20 md:mt-20 md:pt-20">
+        <Marks width="min(78vw, 30rem)" />
       </Fade>
     </section>
   )
