@@ -26,7 +26,7 @@ export function Entrance() {
       <div className="sticky top-0 h-[100svh] overflow-hidden bg-ink">
         {!calm && (
           <m.div className="absolute inset-0 will-change-transform" style={{ opacity: photoOpacity, scale: photoScale }}>
-            <Media src="/media/store-hall.jpg" alt="Зал магазина 13 COBRA: полки с подсветкой и стальная стойка" sizes="100vw" className="object-cover" />
+            <Media src="/media/store-hall.jpg" alt="Зал магазина 13 COBRA: полки с подсветкой и стальная стойка" sizes="100vw" className="object-cover lg:object-[50%_22%]" />
             <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/30 to-ink/50" />
           </m.div>
         )}
