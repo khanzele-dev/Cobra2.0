@@ -108,7 +108,7 @@ export function Header() {
             </div>
 
             <div className="grid flex-1 grid-cols-1 gap-10 overflow-y-auto px-5 pb-8 md:px-10 lg:grid-cols-12">
-              <ul className="flex flex-col justify-center lg:col-span-7" onMouseLeave={() => setHover(0)}>
+              <ul className="flex flex-col justify-center-safe lg:col-span-7" onMouseLeave={() => setHover(0)}>
                 {MAIN.map((l, i) => (
                   <li key={l.href} className="overflow-hidden border-b border-bone/10 first:border-t">
                     <m.div initial={{ y: '110%' }} animate={{ y: '0%' }} transition={{ duration: 1.1, delay: 0.25 + i * 0.07, ease: EASE }}>
@@ -121,7 +121,9 @@ export function Header() {
                       >
                         <span className="label w-10 text-bone/40">13.{String(i + 1).padStart(2, '0')}</span>
                         <span
-                          className={`display text-[clamp(2.75rem,8.5vw,7.5rem)] transition-all duration-700 ease-[var(--ease-cine)] group-hover:translate-x-3 ${
+                          // размер зависит и от высоты экрана: пять пунктов + нижняя строка помещаются на низком ноутбуке
+                          style={{ fontSize: 'clamp(2.25rem, min(6.5vw, 9.5svh), 6rem)' }}
+                          className={`display transition-all duration-700 ease-[var(--ease-cine)] group-hover:translate-x-3 ${
                             hover === i ? 'text-bone' : 'text-bone/35 lg:text-bone/25'
                           }`}
                         >
@@ -134,7 +136,7 @@ export function Header() {
               </ul>
 
               <div className="relative hidden lg:col-span-5 lg:block">
-                <div className="absolute inset-y-10 right-0 w-full overflow-hidden bg-char">
+                <div className="absolute right-0 top-1/2 aspect-[4/5] max-w-full -translate-y-1/2 overflow-hidden bg-char" style={{ height: 'min(62svh, 100%)' }}>
                   <AnimatePresence mode="popLayout">
                     <m.div
                       key={hover}

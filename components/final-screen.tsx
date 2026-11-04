@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Line } from '@/components/reveal'
 import { Perforation } from '@/components/perforation'
-import { Wordmark } from '@/components/wordmark'
+import { Logo } from '@/components/logo'
 import { ADDRESS_FULL, INSTAGRAM_URL, MAP_URL, PHONE, PHONE_HREF, TELEGRAM_HANDLE, TELEGRAM_URL, WHATSAPP_URL } from '@/lib/contacts'
 import { SITE } from '@/lib/site'
 
@@ -19,7 +19,7 @@ export function FinalScreen() {
 
       <div className="relative mt-16 grid grid-cols-1 gap-10 border-t border-bone/10 pt-10 sm:grid-cols-2 lg:grid-cols-4 md:mt-20">
         <div>
-          <Link href="/" className="text-[13px]" aria-label="13 COBRA — на главную"><Wordmark /></Link>
+          <Link href="/" aria-label="13 COBRA — на главную"><Logo className="w-[140px]" /></Link>
           <p className="label mt-4 text-bone/45">Магазин · бренд · зал «Кобра»</p>
         </div>
         <div>
