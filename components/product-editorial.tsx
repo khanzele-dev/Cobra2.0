@@ -18,9 +18,9 @@ const LAYOUT: Record<Variant, { img: string; text: string }> = {
   'right-md': { img: 'lg:col-start-7 lg:col-span-5', text: 'lg:col-start-1 lg:col-span-5' },
 }
 
-type Props = { product: Product; variant?: Variant; index?: number; parallax?: boolean }
+type Props = { product: Product; variant?: Variant; index?: number }
 
-export function ProductEditorial({ product, variant = 'left-lg', index, parallax = true }: Props) {
+export function ProductEditorial({ product, variant = 'left-lg', index }: Props) {
   const face = product.gallery[0]
   const href = `/catalog/${product.slug}`
   const image = (
@@ -34,7 +34,7 @@ export function ProductEditorial({ product, variant = 'left-lg', index, parallax
   return (
     <article className="grid grid-cols-1 items-end gap-8 lg:grid-cols-12 lg:gap-6">
       <Link href={href} className={`group relative block md:mx-auto md:w-[80%] lg:mx-0 lg:w-auto lg:row-start-1 ${LAYOUT[variant].img}`} aria-label={product.name} tabIndex={-1}>
-        {parallax ? <Parallax>{image}</Parallax> : image}
+        <Parallax>{image}</Parallax>
       </Link>
 
       <div className={`lg:row-start-1 lg:pb-6 ${LAYOUT[variant].text}`}>
@@ -57,7 +57,7 @@ export function ProductEditorial({ product, variant = 'left-lg', index, parallax
   )
 }
 
-// Отдельный компонент, чтобы в каталоге (parallax=false) не висели лишние подписки на скролл
+// Фото чуть плывёт при скролле; на телефоне и без движения — стоит на месте
 function Parallax({ children }: { children: React.ReactNode }) {
   const ref = useRef<HTMLDivElement>(null)
   const calm = useCalm()

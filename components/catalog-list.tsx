@@ -1,13 +1,12 @@
 'use client'
 
 import { useState } from 'react'
-import { ProductEditorial } from '@/components/product-editorial'
+import { ProductCard } from '@/components/product-card'
 import { GROUPS, products, type Group } from '@/lib/products'
 
 export type Filter = 'all' | 'nutrition' | Group
 
 const NUTRITION: Group[] = ['protein', 'creatine', 'preworkout']
-const VARIANTS = ['left-lg', 'right-md', 'left-md', 'right-lg'] as const
 
 export function CatalogList({ initial }: { initial: Filter }) {
   const valid = initial === 'all' || initial === 'nutrition' || GROUPS.some((g) => g.key === initial)
@@ -49,21 +48,23 @@ export function CatalogList({ initial }: { initial: Filter }) {
         </ul>
       </nav>
 
-      <div className="flex flex-col gap-24 py-24 md:gap-36 md:py-28">
+      <div className="flex flex-col gap-16 py-12 md:gap-24 md:py-16">
         {visible.map((group) => {
           const items = products.filter((p) => p.group === group.key)
           if (!items.length) return null
           return (
             <section key={group.key} aria-labelledby={`g-${group.key}`}>
-              <header className="mb-16 flex items-end justify-between gap-6 border-b border-bone/15 pb-5 md:mb-24">
+              <header className="mb-8 flex items-end justify-between gap-6 border-b border-bone/15 pb-4 md:mb-10">
                 <h2 id={`g-${group.key}`} className="display min-w-0 text-[clamp(1.375rem,4.5vw,4rem)]">{group.label}</h2>
                 <span className="label shrink-0 pb-2 text-bone/50">{String(items.length).padStart(2, '0')}</span>
               </header>
-              <div className="flex flex-col gap-20 md:gap-28">
-                {items.map((p, i) => (
-                  <ProductEditorial parallax={false} key={p.slug} product={p} variant={VARIANTS[i % VARIANTS.length]} index={i + 1} />
+              <ul className="grid grid-cols-2 gap-x-3 gap-y-10 sm:gap-x-5 md:grid-cols-3 md:gap-y-12 lg:grid-cols-4">
+                {items.map((p) => (
+                  <li key={p.slug}>
+                    <ProductCard product={p} />
+                  </li>
                 ))}
-              </div>
+              </ul>
             </section>
           )
         })}
