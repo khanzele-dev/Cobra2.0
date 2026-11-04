@@ -4,7 +4,7 @@ import { useRef } from 'react'
 import { m, useScroll, useTransform } from 'framer-motion'
 import { Media } from '@/components/media'
 import { SceneLabel } from '@/components/reveal'
-import { Wordmark } from '@/components/wordmark'
+import { Logo } from '@/components/logo'
 import { useCalm } from '@/components/hooks'
 import { LOCATION } from '@/lib/contacts'
 
@@ -34,7 +34,7 @@ export function Entrance() {
         <m.div className="absolute inset-0 flex flex-col items-center justify-center px-5 text-bone" style={{ opacity: markOpacity, y: markY }}>
           <h1 className="overflow-hidden pb-2 text-[clamp(1.6rem,7vw,6.75rem)]">
             <span className="anim-rise block" style={{ animationDelay: '0.4s' }}>
-              <Wordmark />
+              <Logo width="clamp(15rem, 62vw, 58rem)" />
             </span>
           </h1>
           <p className="label anim-fade mt-6 text-bone/55" style={{ animationDelay: '1.2s' }}>

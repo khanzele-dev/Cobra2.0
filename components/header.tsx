@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 import { AnimatePresence, m } from 'framer-motion'
 import { Cropped } from '@/components/media'
-import { Wordmark } from '@/components/wordmark'
+import { Logo } from '@/components/logo'
 import { EASE } from '@/lib/motion'
 import { INSTAGRAM_URL, LOCATION, PHONE, PHONE_HREF, TELEGRAM_URL, WHATSAPP_URL } from '@/lib/contacts'
 
@@ -63,7 +63,7 @@ export function Header() {
       <header className={`fixed inset-x-0 top-0 z-50 transition-colors duration-700 ${scrolled ? 'bg-ink/90' : 'bg-transparent'}`}>
         <div className="flex h-16 items-center justify-between px-5 md:h-20 md:px-10">
           <Link href="/" className="text-[11px] md:text-[13px]" aria-label="13 COBRA — на главную">
-            <Wordmark />
+            <Logo className="w-[96px] md:w-[124px]" />
           </Link>
           <span className="label absolute left-1/2 hidden -translate-x-1/2 text-bone/45 lg:block">{LOCATION}</span>
           <nav className="flex items-center gap-7" aria-label="Основная навигация">
@@ -101,7 +101,7 @@ export function Header() {
             transition={{ duration: 0.9, ease: EASE }}
           >
             <div className="flex h-16 items-center justify-between px-5 md:h-20 md:px-10">
-              <span className="text-[11px] md:text-[13px]"><Wordmark /></span>
+              <Logo className="w-[96px] md:w-[124px]" />
               <button ref={closeBtn} type="button" onClick={() => setOpen(false)} className="label link-u text-bone">
                 Закрыть
               </button>
