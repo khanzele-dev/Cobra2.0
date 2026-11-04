@@ -1,5 +1,6 @@
 import { Media } from '@/components/media'
 import { Fade, Line, SceneLabel } from '@/components/reveal'
+import { Marks } from '@/components/logo'
 import { Need } from '@/components/need'
 import { ADDRESS_FULL, MAP_URL, PHONE, PHONE_HREF, TELEGRAM_HANDLE, TELEGRAM_URL, WHATSAPP_URL } from '@/lib/contacts'
 import { SITE } from '@/lib/site'
@@ -18,7 +19,7 @@ export function Visit() {
   }
 
   return (
-    <section id="visit" aria-labelledby="visit-title" className="cv-auto bg-wall px-5 py-20 text-ink md:px-10 md:py-28">
+    <section id="visit" aria-labelledby="visit-title" className="cv-auto bg-wall px-5 pb-24 pt-20 text-ink md:px-10 md:pb-36 md:pt-28">
       <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:items-end">
         <div className="md:col-span-6">
           <SceneLabel n="09" title="Визит" tone="light" />
@@ -47,6 +48,11 @@ export function Visit() {
           </div>
         </Fade>
       </div>
+
+      {/* Финал страницы: знаки бренда на светлой стене, как на вывеске магазина */}
+      <Fade className="mt-24 flex justify-center border-t border-ink/15 pt-20 md:mt-32 md:pt-32">
+        <Marks width="min(78vw, 46rem)" />
+      </Fade>
     </section>
   )
 }

@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { Line } from '@/components/reveal'
 import { Perforation } from '@/components/perforation'
 import { Logo } from '@/components/logo'
 import { ADDRESS_FULL, INSTAGRAM_URL, MAP_URL, PHONE, PHONE_HREF, TELEGRAM_HANDLE, TELEGRAM_URL, WHATSAPP_URL } from '@/lib/contacts'
@@ -12,12 +11,7 @@ export function FinalScreen() {
       <Perforation id="footer-perf" size={72} clearCenter className="absolute inset-0 text-bone/[0.035]" />
       <div className="led absolute left-[15%] right-[15%] top-0 opacity-40" aria-hidden="true" />
 
-      <h2 className="display relative text-center text-[clamp(2.5rem,8vw,7rem)]">
-        <Line>Сила —</Line>
-        <Line delay={0.12}>это привычка.</Line>
-      </h2>
-
-      <div className="relative mt-10 grid grid-cols-1 gap-10 border-t border-bone/10 pt-10 sm:grid-cols-2 lg:grid-cols-4 md:mt-14">
+      <div className="relative grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <Link href="/" aria-label="13 COBRA — на главную"><Logo className="w-[140px]" /></Link>
           <p className="label mt-4 text-bone/45">Магазин · бренд · зал «Кобра»</p>
