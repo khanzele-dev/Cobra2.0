@@ -32,8 +32,8 @@ export const SITE = {
     handle: '@academy_cobra',
     instagram: 'https://instagram.com/academy_cobra',
     stats: [
-      { label: 'Лет залу', value: '6+' },
-      { label: 'Учеников', value: '100+' },
+      { label: 'Лет тренерской деятельности', value: '11+' },
+      { label: 'Учеников', value: '1000+' },
     ] as Stat[],
   },
 }

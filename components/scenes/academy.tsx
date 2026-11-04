@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Media } from '@/components/media'
+import { CountUp } from '@/components/count-up'
 import { Fade, Line, SceneLabel } from '@/components/reveal'
 import { COACH } from '@/lib/brand'
 import { SITE } from '@/lib/site'
@@ -28,7 +29,9 @@ export function Academy() {
           <dl className="grid grid-cols-2 border-t border-bone/15">
             {academy.stats.map((s, i) => (
               <div key={s.label} className={`border-b border-bone/10 py-6 ${i === 0 ? 'border-r' : 'pl-6'}`}>
-                <dd className="display text-[clamp(4rem,9vw,8rem)]">{s.value}</dd>
+                <dd className="display whitespace-nowrap text-[clamp(2.5rem,6.6vw,7rem)]">
+                  <CountUp value={s.value} />
+                </dd>
                 <dt className="label mt-3 text-bone/45">{s.label}</dt>
               </div>
             ))}
